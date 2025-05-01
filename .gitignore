@@ -1,0 +1,18 @@
+# Electron build artifacts
+dist/
+*.dmg
+*.exe
+*.AppImage
+*.snap
+
+# Electron packaging folders
+release/
+out/
+build/
+
+# Mac junk
+.DS_Store
+
+# Git LFS pointer files (if you plan to use LFS)
+*.zip
+*.tar.gz

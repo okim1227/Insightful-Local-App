@@ -1,0 +1,61 @@
+{
+  "name": "timetracking-local-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "Time tracking desktop app",
+  "author": "Sumin Olivia Kim",
+  "scripts": {
+    "start": "ELECTRON_ENABLE_LOGGING=true ELECTRON_ENABLE_STACK_DUMPING=true electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.timetracker.app",
+    "productName": "Mercor Time Tracker",
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["arm64"]
+        },
+        {
+          "target": "dir",
+          "arch": ["arm64"]
+        }
+      ],
+      "icon": "build/icon.icns"
+    },
+    "dmg": {
+      "format": "UDZO",
+      "window": {
+        "width": 540,
+        "height": 380
+      },
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "files": [
+      "**/*"
+    ]
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.9.0",
+    "canvas-confetti": "^1.9.3",
+    "dotenv": "^16.5.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "electron": "^36.0.0",
+    "electron-builder": "^26.0.12"
+  }
+}

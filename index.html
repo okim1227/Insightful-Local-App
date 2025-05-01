@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mercor Time Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container" style="text-align: center; padding-top: 40px">
+      <img
+        src="mercor_logo.png"
+        alt="Mercor Logo"
+        style="width: 100px; margin-bottom: 20px"
+      />
+      <h1>Mercor Time Tracker</h1>
+
+      <div id="login-section">
+        <h2>Login</h2>
+        <input type="email" id="employeeEmail" placeholder="Email" />
+        <input
+          type="text"
+          id="employeeToken"
+          placeholder="Verification Token"
+        />
+        <button id="loginButton">Login</button>
+      </div>
+
+      <div id="tracker-section" style="display: none">
+        <h2>Tracker</h2>
+        <select id="projectSelect"></select>
+        <br /><br />
+        <button id="startButton">Start</button>
+        <button id="stopButton" disabled>Stop</button>
+        <br /><br />
+        <div id="status">Not tracking</div>
+        <div id="eyes" style="font-size: 32px; margin-top: 10px; display: none">
+          👀
+        </div>
+        <div id="timer">Tracking: 0s</div>
+        <hr />
+        <h3>History</h3>
+        <div id="history"></div>
+      </div>
+    </div>
+
+    <!-- Put canvas at bottom -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Load scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="renderer.js"></script>
+  </body>
+</html>
