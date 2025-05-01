@@ -5,6 +5,7 @@ dist/
 *.AppImage
 *.snap
 
+
 # Electron packaging folders
 release/
 out/
